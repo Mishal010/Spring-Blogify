@@ -165,6 +165,14 @@ const Profile = () => {
           >
             Go to My Blogs
           </button>
+          {Array.isArray(user?.roles) && user.roles.includes("ROLE_ADMIN") && (
+            <button
+              onClick={() => navigate("/admin")}
+              className="mt-4 bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition"
+            >
+              Go to Dashboard
+            </button>
+          )}
         </div>
       </div>
     </div>

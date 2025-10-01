@@ -37,7 +37,7 @@ export const useAuthStore = create((set) => ({
 
       const res = await api.post("/users/login", { email, password });
 
-      // persist in localStorage
+      // persist in localStorage for maintaining the logged person details (NOT SECURE)
       localStorage.setItem("user", JSON.stringify(res.data));
       localStorage.setItem("isAuthenticated", "true");
 
